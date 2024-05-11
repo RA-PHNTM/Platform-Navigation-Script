@@ -1,0 +1,2 @@
+# Platform-Navigation-Script
+Python tool with GUI interface that used to navigate to different Web-based platforms or URLs. Useful for working with multiple SIEM/EDR platforms like Security Onion, Stealthwatch or Carbon Black based on any given set of clients. Can also be used as a simple navigation tool for frequented websites/domains. 
