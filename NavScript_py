@@ -1,0 +1,62 @@
+import webbrowser
+from tkinter import Tk, Entry, Listbox, END
+
+
+
+options = [
+    "Client1", "Client2", "Client3", "Client4", "Client5", "Client6"
+]
+
+root = Tk()
+root.title('Platform Navigation Tool')
+root.geometry('400x300')
+root.config(bg='#4169E1')
+
+
+def autocomplete(event):
+    # Get the current user input
+    user_input = input_entry.get()
+    
+    # Clear the listbox
+    options_listbox.delete(0, options_listbox.size())
+    
+    if user_input:
+        # Filter the options based on the user input
+        filtered_options = [option for option in options if option.lower().startswith(user_input.lower())]
+        
+        # Add the filtered options to the listbox
+        for option in filtered_options:
+            options_listbox.insert(END, option)
+
+
+
+def open_url(event):
+    selected_option = options_listbox.get(options_listbox.curselection())
+    if selected_option in options:
+        if selected_option == "Client1":
+            webbrowser.open("https://duckduckgo.com/")
+        elif selected_option == "Client2":
+            webbrowser.open("https://duckduckgo.com/")
+        elif selected_option == "Client3":
+            webbrowser.open("https://duckduckgo.com/")
+        elif selected_option == "Client4":
+            webbrowser.open("https://duckduckgo.com/")
+        elif selected_option == "Client5":
+            webbrowser.open("https://duckduckgo.com/")
+        elif selected_option == "Client6":
+            webbrowser.open("https://duckduckgo.com/")
+    else:
+        print("Invalid input. Please choose from the options.")
+
+
+
+input_entry = Entry(root)
+input_entry.grid(row=0, column=0)
+input_entry.bind("<KeyRelease>", autocomplete)
+input_entry.focus()
+
+options_listbox = Listbox(root)
+options_listbox.grid(row=1, column=0)
+options_listbox.bind("<Double-Button-1>", open_url)
+
+root.mainloop()
