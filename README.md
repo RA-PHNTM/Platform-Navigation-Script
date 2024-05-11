@@ -3,8 +3,11 @@ Python tool with GUI interface that used to navigate to different Web-based plat
 
 Features:
 |*Dropdown menu that lists all entities based on letters entered|
+
 |*Double-clickable options|
+
 |*GUI Window wwith color|
+
 |*Web-browsing capability|
 
 
