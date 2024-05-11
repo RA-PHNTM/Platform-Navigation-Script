@@ -7,7 +7,7 @@ Features:
 
 *Double-clickable options
 
-*GUI Window wwith color
+*GUI Window with color
 
 *Web-browsing capability
 
